@@ -5,7 +5,7 @@ using namespace std;
 
 int main(void)
 {
-	cout << jegob(3+1) << endl; //4*4¿Í °°À½
-	cout << ((3+1) * (3+1)) << endl; //À§¿Í °°À½
+	cout << jegob(3+1) << endl; //4*4ì™€ ê°™ìŒ
+	cout << ((3+1) * (3+1)) << endl; //ìœ„ì™€ ê°™ìŒ
 
 }
