@@ -1,6 +1,6 @@
-#include<iostream> //cout,endl »ç¿ë
-#include<stdio.h> //printf »ç¿ë
-#include<string> //std::string Å¬·¡½º »ç¿ë
+#include<iostream> //cout,endl ì‚¬ìš©
+#include<stdio.h> //printf ì‚¬ìš©
+#include<string> //std::string í´ë˜ìŠ¤ ì‚¬ìš©
 using namespace std;
 
 int main(void)
