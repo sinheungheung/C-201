@@ -1,4 +1,4 @@
-#include<iostream> //cout,endl ì‚¬ìš©
+#include<iostream> //cout,endl »ç¿ë
 #include<string>
 
 using namespace std;
@@ -7,37 +7,42 @@ class Student
 {
 private:
 	int nHakbun;
-	string sName;
-	
+	string sName;	
 
 public:
-	// ìƒì„±ì: ê°ì²´ê°€ ìƒì„±ë˜ë©´ ìë™ìœ¼ë¡œ í˜¸ì¶œë˜ëŠ” í•¨ìˆ˜
-	// ë°˜í™˜í˜•ì„ ê°–ê³ ìˆì§€ ì•ŠëŠ”ë‹¤
+	// »ı¼ºÀÚ: °´Ã¼°¡ »ı¼ºµÇ¸é ÀÚµ¿À¸·Î È£ÃâµÇ´Â ÇÔ¼ö
+	// ¹İÈ¯ÇüÀ» °®°íÀÖÁö ¾Ê´Â´Ù
 	Student();
+	Student(int Hakbun, string Name);
 
 	void show();
 	
 };
 
-
 Student::Student()
 {
-	
 		nHakbun = 1234;
-		sName = "ì´ì‚¬ë‘";
-		cout << "í•™ë²ˆì´ ë“±ë¡ë˜ì—ˆìŠµë‹ˆë‹¤." << endl;
-	
+		sName = "ÀÌ»ç¶û";
+		cout << "ÇĞ¹øÀÌ µî·ÏµÇ¾ú½À´Ï´Ù." << endl;
 }
+Student::Student(int Hakbun, string Name)
+{
+	nHakbun = Hakbun;
+	sName = Name;
+	cout << "ÇĞ¹øÀÌ µî·ÏµÇ¾ú½À´Ï´Ù." << endl;
+	}
+
 void Student::show()
 {
-	// ë©¤ë²„í•¨ìˆ˜
-	cout << "í•™ë²ˆì€ " << nHakbun << "ì…ë‹ˆë‹¤" << endl;
-	cout << "í•™ë²ˆì€ " << sName << "ì…ë‹ˆë‹¤" << endl;
+	// ¸â¹öÇÔ¼ö
+	cout << "ÇĞ¹øÀº " << nHakbun << "ÀÔ´Ï´Ù" << endl;
+	cout << "ÇĞ¹øÀº " << sName << "ÀÔ´Ï´Ù" << endl << endl;
 }
 int main(void)
-{
-	
-	Student stu;
-	stu.show();
-	
+{	
+	Student stu1 = Student();
+	stu1.show();	
+
+	Student stu2 = Student(1111,"sinheung");
+	stu2.show();
 }
