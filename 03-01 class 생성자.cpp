@@ -1,4 +1,4 @@
-#include<iostream> //cout,endl »ç¿ë
+#include<iostream> //cout,endl ì‚¬ìš©
 #include<string>
 
 using namespace std;
@@ -8,12 +8,11 @@ class Student
 private:
 	int nHakbun;
 	string sName;
-
 	
 
 public:
-	// »ı¼ºÀÚ: °´Ã¼°¡ »ı¼ºµÇ¸é ÀÚµ¿À¸·Î È£ÃâµÇ´Â ÇÔ¼ö
-	// ¹İÈ¯ÇüÀ» °®°íÀÖÁö ¾Ê´Â´Ù
+	// ìƒì„±ì: ê°ì²´ê°€ ìƒì„±ë˜ë©´ ìë™ìœ¼ë¡œ í˜¸ì¶œë˜ëŠ” í•¨ìˆ˜
+	// ë°˜í™˜í˜•ì„ ê°–ê³ ìˆì§€ ì•ŠëŠ”ë‹¤
 	Student();
 
 	void show();
@@ -25,15 +24,15 @@ Student::Student()
 {
 	
 		nHakbun = 1234;
-		sName = "ÀÌ»ç¶û";
-		cout << "ÇĞ¹øÀÌ µî·ÏµÇ¾ú½À´Ï´Ù." << endl;
+		sName = "ì´ì‚¬ë‘";
+		cout << "í•™ë²ˆì´ ë“±ë¡ë˜ì—ˆìŠµë‹ˆë‹¤." << endl;
 	
 }
 void Student::show()
 {
-	// ¸â¹öÇÔ¼ö
-	cout << "ÇĞ¹øÀº " << nHakbun << "ÀÔ´Ï´Ù" << endl;
-	cout << "ÇĞ¹øÀº " << sName << "ÀÔ´Ï´Ù" << endl;
+	// ë©¤ë²„í•¨ìˆ˜
+	cout << "í•™ë²ˆì€ " << nHakbun << "ì…ë‹ˆë‹¤" << endl;
+	cout << "í•™ë²ˆì€ " << sName << "ì…ë‹ˆë‹¤" << endl;
 }
 int main(void)
 {
