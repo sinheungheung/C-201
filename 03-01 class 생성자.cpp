@@ -23,14 +23,14 @@ Student::Student()
 {
 	    this->nHakbun = 1234;
 		this->sName = "이사랑";
-		cout << "학번이 등록되었습니다." << endl;
+		cout << "일반생성자 생성." << endl;
 }
 // 멤버변수를 초기화 할 수 있으며 따라서,
 // const형 변수와 참조형 변수를 멤버변수로 할 수 있다.
 Student::Student(int Hakbun, string Name)
 	: nHakbun(Hakbun), sName(Name) // 멤버변수(매개변수)
 {
-	cout << "학번이 등록되었습니다." << endl;
+	cout << "일반생성자 생성." << endl;
 	}
 
 void Student::show()
@@ -42,10 +42,13 @@ void Student::show()
 int main(void)
 {	
 	
-	Student* stu2 = new Student(1111,"sinheung");
-	stu2->show();
+	Student* stu2 = new Student[6];
+	for (int i = 0; i < 6; i++)
+		stu2[i].show(); 
+	// 포인터지만 화살표(->)를 쓰면 에러가 난다
+	// stu2[i]: *(stu2+i)이므로 이미 * 연산자가 있어 ->를 안쓴다
+	delete []stu2;
 
-	delete stu2;
 	return 0;
 
 }
