@@ -14,7 +14,7 @@ public:
 	// 반환형을 갖고있지 않는다
 	Student();
 	Student(int Hakbun, const char* Name);
-
+	~Student();
 	void show();
 	
 };
@@ -33,6 +33,11 @@ Student::Student(int Hakbun, const char* Name)
 	sName = new char[len]; // 갯수만큼 메모리 할당
 	strcpy(sName, Name);
 	}
+Student::~Student()
+{
+	delete []sName;
+	cout << "소멸자 호출" << endl;
+}
 
 void Student::show()
 {
