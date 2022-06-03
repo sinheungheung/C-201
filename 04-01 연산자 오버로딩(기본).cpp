@@ -1,17 +1,26 @@
-#include<iostream> // cout,endl ì‚¬ìš©
+#include<iostream> // cout,endl »ç¿ë
 using namespace std;
 
 class Point
 {
 private:
-	 int mX;
-	 int mY;
+	int mX;
+	int mY;
 public:
-	Point(int _x,int _y);
+	// »ı¼ºÀÚ
+	Point(int _x, int _y);
+	// ¸Å°³º¯¼ö°¡ ¾ø´Â »ı¼ºÀÚ
+	Point(void);
+
+	// ¿¬»êÀÚ ¿À¹ö·Îµù
+	Point operator+(const Point& rhs);//right hand side: ¿À¸¥ÂÊ ¹æ¸é
+
 	void print(void);
 };
-// ìƒì„±ì ìƒì„±:ì´ˆê¸°í™” 
-Point::Point(int _x, int _y):mX(_x),mY(_y){}
+// »ı¼ºÀÚ Á¤ÀÇ:ÃÊ±âÈ­ 
+Point::Point(int _x, int _y) :mX(_x), mY(_y) {}
+// ¸Å°³º¯¼ö ¾ø´Â »ı¼ºÀÚ Á¤ÀÇ
+Point::Point(){}
 
 void Point::print(void)
 {
@@ -21,9 +30,19 @@ void Point::print(void)
 //	mX = _x;
 //	mY = _y;
 //};
+Point Point::operator+(const Point& rhs)
+{
+	Point p; // ¸Å°³º¯¼ö ¾ø´Â »ı¼ºÀÚ ÇÊ¿ä
+	p.mX = mX + rhs.mX;
+	p.mY = mY + rhs.mY;
+	return p;
+}
 int main(void)
 {
 	Point p1(1, 2);
+	Point p2(3, 4);
+	Point sum = p1.operator+(p2); // p1 + p2
+	sum.print(); // (4,6)ÀÌ Ãâ·Â
 	p1.print();
 	return 0;
 }
