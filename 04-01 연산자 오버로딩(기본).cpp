@@ -1,4 +1,4 @@
-#include<iostream> // cout,endl »ç¿ë
+#include<iostream> // cout,endl ì‚¬ìš©
 using namespace std;
 
 class Point
@@ -10,7 +10,7 @@ public:
 	Point(int _x,int _y);
 	void print(void);
 };
-// »ı¼ºÀÚ »ı¼º:ÃÊ±âÈ­ 
+// ìƒì„±ì ìƒì„±:ì´ˆê¸°í™” 
 Point::Point(int _x, int _y):mX(_x),mY(_y){}
 
 void Point::print(void)
