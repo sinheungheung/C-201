@@ -5,7 +5,7 @@ using namespace std;
 class Animal {
 public:
 	void eat(void) { cout << "µ¿¹°¸Ô¾î" << endl; }
-	void roar(void) { cout << "µ¿¹°Â¢¾î" << endl; }
+	virtual void roar(void) { cout << "µ¿¹°Â¢¾î" << endl; }
 	void walk(void) { cout << "µ¿¹°°É¾î" << endl; }
 
 private:
@@ -16,11 +16,11 @@ private:
 
 class Tiger : public Animal {
 public:
-	void roar(void) { cout << "¾îÈï" << endl; }
+	void roar(void) override { cout << "¾îÈï" << endl; }
 };
 class Dog : public Animal {
 public:
-	void roar(void) { cout << "¸Û¸Û" << endl; }
+	void roar(void) override { cout << "¸Û¸Û" << endl; }
 };
 void main(void)
 {
@@ -29,10 +29,10 @@ void main(void)
 	delete animal;
 
 	animal = new Tiger();
-	animal->roar(); // "µ¿¹°Â¢¾î"(¾îÈï X)
+	animal->roar(); // ¾îÈï 
 	delete animal;
 	
 	animal = new Dog();
-	animal->roar(); // "µ¿¹°Â¢¾î"(¸Û¸Û X)
+	animal->roar(); // ¸Û¸Û
 	delete animal;
 }
