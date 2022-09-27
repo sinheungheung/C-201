@@ -28,6 +28,9 @@ void main(void)
 	// 자동적으로 크기확장 후 삽입
 	i3.push_back(10);
 
+	i3[5] = 1149;
+	i3.at(3) = 201;
+
 	// vector의 모든 원소 출력
 	for (int i = 0; i < i3.size(); i++)
 		cout << i3[i] << " ";
