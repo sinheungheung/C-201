@@ -6,21 +6,15 @@ using namespace std;
 
 void main(void) {
 	map<string, string> IBW;	
-	IBW["학교"] = "미림여자정보과학고등학교";
-	IBW["과"] = "뉴미디어소프트웨어과";
-	IBW["이름"] = "김신흥";
+	IBW["우영우"] = "박은빈";
+	IBW["정명석"] = "강기영";
+	IBW["권민우"] = "주종혁";
+	IBW["이준호"] = "강태오";
 
-	map<string, string>::iterator iter;
-	for (iter = IBW.begin(); iter != IBW.end(); iter++)
-		cout << iter->first << "(은/는) " << iter->second << "," << endl;
+	// vector의 모든 원소 출력(반복자)
+	for (auto iter = IBW.begin(); iter != IBW.end(); iter++)
+		cout << iter->first << "역 " << iter->second << "분" << endl;
 
-	cout << "나는 " << IBW["이름"] << endl;
+	cout << "드라마의 주인공은 " << IBW["우영우"] << endl;
 
-	// 특정한 key 삭제함
-	IBW.erase("학교");
-
-	for (iter = IBW.begin(); iter != IBW.end(); iter++)
-		cout << iter->first << "(은/는) " << iter->second << "," << endl;
-
-	cout << "나는 " << IBW["이름"] << endl;
 }
