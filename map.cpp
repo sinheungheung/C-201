@@ -4,23 +4,29 @@
 
 using namespace std;
 
-// 우영우 : 박은빈
-// 정명석 : 강기영
-// 권민우 : 주종혁
-// 이준호 : 강태오
+int main() {
+	map <string, string>dic; // 맵 컨테이너 생성, 키는 영어 단어, 값은 한글 단어
 
-void main(void)
-{
-	map<string, string> IBW;	// IBW : 이상한 변호사 우영우
-	IBW["우영우"] = "박은빈";
-	IBW["정명석"] = "강기영";
-	IBW["권민우"] = "주종혁";
-	IBW["이준호"] = "강태오";
+	// 단어 3개를 map에 저장
+	dic.insert(make_pair("love", "사랑")); // ("love", "사랑")저장
+	dic.insert(make_pair("apple", "사과")); // ("apple", "사과")저장
+	dic["cherry"] = "체리"; // ("cherry", "체리")저장
 
-	// vector의 모든 원소 출력(반복자)
-	map<string, string>::iterator iter;
-	for (iter = IBW.begin(); iter != IBW.end(); iter++)
-		cout << iter->first << "역 " << iter->second << "분" << endl;
+	cout << "저장된 단어 개수" << dic.size() << endl;
 
-	cout << "드라마의 주인공은 " << IBW["우영우"] << endl;
+	string eng;
+	while (true) {
+		cout << "찾고 싶은 단어>>";
+		getline(cin, eng); // 사용자로부터 키 입력
+		if (eng == "exit")
+			break; // "exit"이 입력되면 종료
+
+		if (dic.find(eng) == dic.end()) // eng '키'를 끝까지 찾았는데 없음
+			cout << "없음" << endl;
+		else cout << dic[eng] << endl; // dic에서 eng의 값을 찾아 출력
+
+		cout << "종료" << endl;
+
+	}
+
 }
